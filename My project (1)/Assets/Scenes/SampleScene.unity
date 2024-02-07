@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 28191912}
   - component: {fileID: 28191911}
   - component: {fileID: 28191919}
+  - component: {fileID: 28191920}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -228,7 +229,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 6.34, z: 0}
   m_LocalScale: {x: 4.855822, y: 5.283042, z: 4.9853683}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 963194228}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &28191919
@@ -239,7 +241,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28191910}
   serializedVersion: 4
-  m_Mass: 100
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -256,8 +258,22 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &28191920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28191910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f888b67b84db4bc489dea1ce48b6702a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 20
+  jumpForce: 20
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,13 +453,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.74665785, z: -0, w: 0.66520834}
-  m_LocalPosition: {x: 21.92, y: 13.66, z: 6.44}
-  m_LocalScale: {x: 1, y: 1.8359, z: 1}
+  m_LocalRotation: {x: -0, y: -0.031061156, z: -0, w: 0.9995175}
+  m_LocalPosition: {x: 3.1096692, y: 3.2992358, z: -8.691435}
+  m_LocalScale: {x: 0.20591716, y: 0.34750813, z: 0.20060708}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -96.603, z: 0}
+  m_Father: {fileID: 28191914}
+  m_LocalEulerAnglesHint: {x: 0, y: -3.56, z: 0}
 --- !u!1 &1184795040
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,7 +473,7 @@ GameObject:
   - component: {fileID: 1184795042}
   - component: {fileID: 1184795041}
   m_Layer: 0
-  m_Name: Lol
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -553,7 +569,6 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 963194228}
   - {fileID: 705507995}
   - {fileID: 1184795044}
   - {fileID: 28191914}
