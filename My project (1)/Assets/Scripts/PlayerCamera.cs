@@ -17,7 +17,7 @@ public class PlayerCamera : MonoBehaviour
     {
         float mouseX = Input.GetAxis("Mouse X") * _mouseSensitivity;
         
-        float mouseX = Input.GetAxis("Mouse Y") * _mouseSensitivity;
+        float mouseY = Input.GetAxis("Mouse Y") * _mouseSensitivity;
 
         _rotationY += mouseX;
         _rotationX += mouseY;
@@ -25,7 +25,8 @@ public class PlayerCamera : MonoBehaviour
         _rotationX = Mathf.Clamp(_rotationX, -40, 40);
 
         transform.localEulerAngles = new Vector3(_rotationX, _rotationY, 0);
-
+    
         transform.position = _target.position - transform.forward;
+
     }
 }
